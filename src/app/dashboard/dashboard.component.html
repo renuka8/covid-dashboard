@@ -1,8 +1,7 @@
-<div class="Home container">
-    
+<div class="Home container">    
         <div class="header">
             <a href="#" class="logo">Dashboard</a>
-            <div class="header-right pt-1">
+            <div (click)="profileRouting()"class="header-right pt-1">
              <img src="/assets/images/pic.jpg" height="40" width="40">
             </div>
           </div>
@@ -196,8 +195,8 @@
                         </svg></span>
 
                     <tr class="state ">
-                        <td (click)="OngetState(data.state); showHideData(data) " style="font-weight: 600; ">
-                            {{data.state}}</td>
+                        <td (click)="OngetState(data?.state); showHideData(data) " style="font-weight: 600; ">
+                            {{data?.state}}</td>
 
 
 
@@ -211,18 +210,16 @@
                                     stroke-linejoin="round ">
                                     <line x1="12 " y1="19 " x2="12 " y2="5 "></line>
                                     <polyline points="5 12 12 5 19 12 "></polyline>
-                                </svg> {{DailystateStatus[i].confirmed}}</span> {{data.confirmed}}
+                                </svg> {{DailystateStatus[i]?.confirmed}}</span> {{data?.confirmed}}
                         </td>
-
-
-                        <td style="color: inherit; ">{{data.active}}</td>
-                        <td style="color: inherit; ">{{data.recovered}}</td>
-                        <td style="color: inherit; ">{{data.deaths}}</td>
+                        <td style="color: inherit; ">{{data?.active}}</td>
+                        <td style="color: inherit; ">{{data?.recovered}}</td>
+                        <td style="color: inherit; ">{{data?.deaths}}</td>
 
                     </tr>
 
 
-                    <tr class="nohover" app-district *ngIf="data[ 'show'] "></tr>
+                    <tr class="nohover" app-district *ngIf="data?.show" ></tr>
 
                 </tbody>
 
@@ -238,7 +235,7 @@
                     <h6>Click on a state for more details</h6>
                 </div>
                 <div class="meta1 " *ngIf="SingleStateData">
-                    <h2>{{SingleStateData.state}}</h2>
+                    <h2>{{SingleStateData?.state}}</h2>
                 </div>
 
 
@@ -248,28 +245,28 @@
                 <div class="stats no-padd col-xs-3 ">
                     <h5>Confirmed</h5>
                     <div class="stats-bottom ">
-                        <h1>{{SingleStateData.confirmed}}</h1>
+                        <h1>{{SingleStateData?.confirmed}}</h1>
                         <h6></h6>
                     </div>
                 </div>
                 <div class="stats is-blue no-padd col-xs-3 ">
                     <h5>Active</h5>
                     <div class="stats-bottom ">
-                        <h1>{{SingleStateData.active}}</h1>
+                        <h1>{{SingleStateData?.active}}</h1>
                         <h6></h6>
                     </div>
                 </div>
                 <div class="stats is-green no-padd col-xs-3 ">
                     <h5>Recovered</h5>
                     <div class="stats-bottom ">
-                        <h1>{{SingleStateData.recovered}}</h1>
+                        <h1>{{SingleStateData?.recovered}}</h1>
                         <h6></h6>
                     </div>
                 </div>
                 <div class="stats is-gray no-padd col-xs-3 ">
                     <h5>Deceased</h5>
                     <div class="stats-bottom ">
-                        <h1>{{SingleStateData.deaths}}</h1>
+                        <h1>{{SingleStateData?.deaths}}</h1>
                         <h6></h6>
                     </div>
                 </div>

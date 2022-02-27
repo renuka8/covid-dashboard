@@ -26,6 +26,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { DistrictComponent } from './district/district.component';
+import { ProfileComponent } from './profile/profile.component';
 // What you register will depend on what chart you are using and features used.
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 
@@ -33,8 +35,10 @@ Chart.register(BarController, BarElement, CategoryScale, LinearScale, Title, Too
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
-    
+    DashboardComponent,
+    DistrictComponent,
+    ProfileComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CoronaService } from '../shared/corona.service';
 
 @Component({
@@ -36,7 +37,7 @@ export class DashboardComponent implements OnInit {
   SingleStateData: any;
   lastrefreshedtime: any;
 
-  constructor(private cs: CoronaService) { }
+  constructor(private cs: CoronaService, public router: Router, public activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -334,6 +335,9 @@ export class DashboardComponent implements OnInit {
       this.calculateDiff(this.sortedDataBasedOnDate)
     }
 
+  }
+  profileRouting(){
+    this.router.navigateByUrl('/profile');
   }
 
 }
