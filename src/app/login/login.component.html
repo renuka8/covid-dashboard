@@ -1,0 +1,38 @@
+<section class="vh-100 gradient-custom" style="height:100%">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body text-center">
+
+            <div class="mb-md-4 mt-md-4">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="typeEmailX">User Name</label>
+                <input type="email" [(ngModel)]="username" id="typeEmailX" class="form-control form-control-lg" />
+
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="typePasswordX">Password</label>
+                <input type="password" [(ngModel)]="password" id="typePasswordX" class="form-control form-control-lg" />
+
+              </div>
+
+              <span class="text-danger">{{error}}</span>
+              <button class="btn btn-outline-light btn-lg px-5" (click)="loginSubmit()" type="submit">Login</button>
+
+
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
