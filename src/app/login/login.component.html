@@ -20,8 +20,10 @@
                 <input type="password" [(ngModel)]="password" id="typePasswordX" class="form-control form-control-lg" />
 
               </div>
-
-              <span class="text-danger">{{error}}</span>
+<div class="mb-2">
+  <span class="text-danger">{{error}}</span>
+</div>
+              
               <button class="btn btn-outline-light btn-lg px-5" (click)="loginSubmit()" type="submit">Login</button>
 
 

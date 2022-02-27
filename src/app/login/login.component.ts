@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
     if (!this.username) {
       this.error = 'User name can not be blank'
     } else if (!this.password) {
-      this.error = 'password can not be blank'
+      this.error = 'Password can not be blank'
     } else if (this.username != 'admin' && this.password != 'admin') {
-      this.error = 'please enter valid username and pwd'
+      this.error = 'Please enter valid username and pwd'
     } else if (this.username === 'admin' && this.password === 'admin') {
       this.error = '';
       this.router.navigate(['/dashboard'])
