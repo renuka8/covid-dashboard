@@ -22,5 +22,5 @@ If you want to run the latest code from git, here's how to get started:
 
 ## Contributing
 
-![Node-RED: Low-code programming for event-driven applications](http://nodered.org/images/node-red-screenshot.png)
+![Covid19: Low-code programming for event-driven applications](/src/assets/images/COVID-Dashboard.png)
 
